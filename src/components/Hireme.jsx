@@ -15,10 +15,11 @@ const Hireme = () => {
             Do you want any work from me?
           </h2>
           <p className="lg:text-left text-justify max-w-lg text-sm mt-4 text-gray-200 leading-6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis dicta
-            soluta quos tempore eos accusamus cupiditate, amet in similique
-            sapiente obcaecati odio deleniti architecto corporis ratione.
-            Consequatur a quidem maiores!
+            To leverage my expertise as an award-winning developer and extensive
+            experience in working on multiple project-based assignments to help
+            organizations create complex and innovative solutions. I am
+            dedicated to collaborating with teams and utilizing my skills to
+            drive success in challenging development initiatives.!
           </p>
           <button className="btn-primary mt-10">Say Hello</button>
         </div>

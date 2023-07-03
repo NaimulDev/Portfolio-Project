@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
+import Typewriter from "react-ts-typewriter";
 import hero from "../assets/images/hero.png";
 const Hero = () => {
   const social_media = [
-    "logo-instagram",
-    "logo-facebook",
-    "logo-linkedin",
-    "logo-twitter",
+    { name: "logo-facebook", link: "https://www.facebook.com/naimul49" },
+    { name: "logo-linkedin", link: "https://www.linkedin.com/in/nimul/" },
+    { name: "logo-github", link: "https://github.com/Nimul99" },
+    { name: "logo-twitter", link: "https://twitter.com/example/" },
   ];
+
+  const [selectedSocialSite, setSelectedSocialSite] = useState(null);
+
+  const handleSocialIconClick = (link) => {
+    // Open the link in a new tab when the icon is clicked
+    window.open(link, "_blank");
+  };
   return (
     <section
       id="home"
@@ -22,19 +30,24 @@ const Hero = () => {
               Hello!
               <br />
             </span>
-            My Name is <span>Naimul Hasan</span>
+            My Name is{" "}
+            <span>
+              <Typewriter text="Nimul Hasan" />
+            </span>
           </h1>
+
           <h4 className="md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-gray-600">
             MERN Developer
           </h4>
           <button className="btn-primary mt-8">Contact Me</button>
           <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5">
-            {social_media?.map((icon) => (
+            {social_media?.map((site) => (
               <div
-                key={icon}
+                key={site.name}
                 className="text-gray-600 hover:text-white cursor-pointer "
+                onClick={() => handleSocialIconClick(site.link)}
               >
-                <ion-icon name={icon}></ion-icon>
+                <ion-icon name={site.name}></ion-icon>
               </div>
             ))}
           </div>
