@@ -32,7 +32,7 @@ const Hero = () => {
             </span>
             My Name is{" "}
             <span>
-              <Typewriter text="Nimul Hasan" />
+              <Typewriter text="Naimul Hasan" />
             </span>
           </h1>
 
